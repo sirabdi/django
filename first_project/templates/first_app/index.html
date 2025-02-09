@@ -1,7 +1,9 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
   <head>
     <title>New Templates</title>
+    <link rel="stylesheet" href="{% static "css/global.css" %}" />
   </head>
   <body>
     <h1>My First Templates</h1>
@@ -10,5 +12,6 @@
       The purpose of a web browser (Chrome, Edge, Firefox, Safari) is to read
       HTML documents and display them correctly.
     </p>
+    <img src="{% static "images/items-images-one.png" %}" alt="Images Static">
   </body>
 </html>
