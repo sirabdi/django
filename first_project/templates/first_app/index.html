@@ -7,11 +7,33 @@
   </head>
   <body>
     <h1>My First Templates</h1>
-    <h3>{{ insert_me }}</h3>
     <p>
       The purpose of a web browser (Chrome, Edge, Firefox, Safari) is to read
       HTML documents and display them correctly.
     </p>
+    <div>
+      {% if access_records %}
+      <table>
+        <thead>
+          <tr>
+            <th>Site Name</th>
+            <th>Date Accessed</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for acc in access_records %}
+          <tr>
+            <td>{{ acc.name }}</td>
+            <td>{{ acc.date }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+      <p>No Access Record Found!</p>
+      {% endif %}
+    </div>
     <img src="{% static "images/items-images-one.png" %}" alt="Images Static">
   </body>
 </html>
