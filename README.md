@@ -22,3 +22,11 @@ python manage.py createsuperuser
 2. python manage.py makemigrations <name-app>
    eg: python manage.py makemigrations app_two
 3. python manage.py migrate
+
+# HOW TO START APP
+
+django-admin startapp basic_app
+
+# HOW TO START PROJECT
+
+django-admin startproject learning_templates
